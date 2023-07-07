@@ -22,7 +22,7 @@ public class Account {
     @JoinColumn(name = "bank_id")
     private Bank bank;
 
-    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.MERGE})
+    @ManyToOne(cascade = {CascadeType.MERGE, CascadeType.PERSIST})
     @JoinColumn(name = "customer_id")
     @JsonBackReference
     private Customer customer;
